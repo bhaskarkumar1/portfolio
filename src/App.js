@@ -1,22 +1,31 @@
-import './App.css';
-import {Routes, Route } from "react-router-dom";
+import React from "react";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Home from "./containers/home";
+import About from "./containers/about";
+import Resume from "./containers/resume";
+import Contact from "./containers/contact";
+import Skills from "./containers/skills";
+import Portfolio from "./containers/portfolio";
+import Navbar from "./components/navbar";
+
 function App() {
   return (
-    <div className='App'>
-    {/* particles js */}
+    <div className="App">
+      {/* particles js */}
 
-    {/* navbar */}
+      {/* navbar */}
+        <Navbar/>
 
-    {/* main */}
-    <Routes>
-      <Route index path='/' element={<Home/>} />
-      <Route  path='/about' element={<About/>} />
-      <Route  path='/resume' element={<Resume/>} />
-      <Route  path='/skills' element={<Skills/>} />
-      <Route  path='/portfolio' element={<Portfolio/>} />
-      <Route  path='/contact' element={<Contact/>} />
-
-    </Routes>
+      {/* main */}
+      <Routes>
+        <Route index path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
